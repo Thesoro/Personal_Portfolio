@@ -44,5 +44,5 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'minitest-rails'
-#gem 'minitest-rails-capybara'
+gem 'minitest-rails-capybara'
 gem 'capybara'
