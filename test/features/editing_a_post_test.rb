@@ -8,7 +8,7 @@ feature "Editing a post" do
     #when i click on edit post and make changes
     click_link("Edit", :match => :first)
     fill_in "Title", with: "Coding Any High Level Language"
-    click_link("Update Post", :match => :first)
+    click_button("Update Post", :match => :first)
 
     #then the changes should be made to the original post
     page.text.must_include "Post was successfully updated"
