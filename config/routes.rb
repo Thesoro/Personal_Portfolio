@@ -1,7 +1,7 @@
 PersonalPortfolio::Application.routes.draw do
   resources :posts
 
-  root to: 'posts#index'
+  #root to: 'posts#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
