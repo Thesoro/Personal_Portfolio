@@ -1,5 +1,5 @@
 PersonalPortfolio::Application.routes.draw do
-  resources :posts
+  resources :posts, :projects
 
   root to: 'posts#index'
 
