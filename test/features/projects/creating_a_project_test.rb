@@ -1,7 +1,7 @@
 require "test_helper"
 
-feature "creating a project" do
-	scenario "it should create the portfolio with parameters i define" do
+feature "as a site owner, i want to add new projects so i can show off" do
+	scenario "adding a new project" do
 		#when i go to the project index
 		visit projects_path
 		#and I click on create a new project and fill in the fields
@@ -13,5 +13,20 @@ feature "creating a project" do
 		page.text.must_include "Project has been created."
 		page.text.must_include "Rob's"
 		page.text.must_include "Rails"
+	end
+
+	scenario "Project has invalid data" do
+		#given invalid data is submitted to the form
+		visit new_project_path
+		fill_in "Name", with: "Q"
+
+		#when the form is submitted with too short a name and no techs field
+		click_on "Create Project"
+
+		#Then the form should be displayed again with an error message
+		current_path.must_match /projects$/
+		page.text.must_include "Project could not be saved"
+		page.text.must_include "Name is too short"
+		page.text.must_include "Technologies used can't be blank"
 	end
 end
