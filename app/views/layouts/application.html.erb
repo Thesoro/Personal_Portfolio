@@ -12,13 +12,13 @@
   	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
 
   	<!-- Set the viewport width to device width for mobile -->
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
-    <%= csrf_meta_tags %>
+    <%= csrf_meta_tags %> -->
   </head>
 
   <body>
@@ -31,6 +31,7 @@
     <%= yield %>
     </div>
 
-    <%= javascript_include_tag "application" %>
+    <!-- <%= javascript_include_tag "application" %> -->
+    <%= link_to 'Sign Up',  new_user_registration_path %>
   </body>
 </html>
