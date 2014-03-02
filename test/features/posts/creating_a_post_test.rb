@@ -15,6 +15,8 @@ feature "Creating a post" do
     page.text.must_include "Post was successfully created"
     page.text.must_include posts(:cr).title
     page.text.must_include "Status: unpublished"
+    page.has_css? "#author"
+    page.text.must_include users(:janet).email
   end
 
   scenario "unauthenticated users cannot visit new_post_path" do
