@@ -50,4 +50,3 @@ end
 gem 'minitest-rails'
 gem 'minitest-rails-capybara'
 gem 'capybara'
-ruby "2.0.0"
