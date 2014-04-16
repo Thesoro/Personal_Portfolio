@@ -7,7 +7,7 @@
 #
 janet:
   email: "pat@example.com"
-  password: "password"
+ # password: "password"
 #
 
 reno:

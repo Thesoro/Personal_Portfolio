@@ -1,15 +1,5 @@
 require "test_helper"
 
-•
-RED: Write some tests for these stories...
-•
-As a site visitor I want to write a comment from a blog post page so that I can troll the author
-•
-As an author or editor I want to approve comments so that my blog does not have spam comments
-•
-Comments should not display until they are approved by an author or editor
-•
-How do you want approval to work? A checkbox on an edit form? A button that PATCHes to CommentsController#update?
 
 feature "comments" do
   scenario "posting a new comment" do
@@ -19,7 +9,7 @@ feature "comments" do
     #when i click on comment, fill in text, and submit
     click_on "Comment"
     fill_in "Username", with: comments(:troll).author
-    fill_in "Comment", with: comments(:troll).comment
+    fill_in "Comment", with: comments(:troll).content
     click_on "Submit"
 
     #then I should be told my comment has been submitted
@@ -31,7 +21,7 @@ feature "comments" do
     visit posts_path
     click_on "Comment"
     fill_in "Username", with: comments(:troll).author
-    fill_in "Comment", with: comments(:troll).comment
+    fill_in "Comment", with: comments(:troll).content
     click_on "Submit"
     #and i'm signed in as an admin
     visit "/"
@@ -52,12 +42,12 @@ feature "comments" do
 
   scenario "unapproved comments should not be displayed" do
     #given i'm a visitor
-    visit posts_path(post)
+    visit posts_path
 
     #and I make a dumb comment
     click_on "Comment"
     fill_in "Username", with: comments(:troll).author
-    fill_in "Comment", with: comments(:troll).comment
+    fill_in "Comment", with: comments(:troll).content
     click_on "Submit"
 
     #it should not be displayed yet
