@@ -1,7 +1,11 @@
 language: ruby
 rvm:
-  - "2.0.0"
-  - jruby-20mode
+  - 2.1.0
+  - jruby-18mode
+  - jruby-19mode
   - rbx
+  - ruby-head
+  - jruby-head
+  - ree
 notifications:
   email: false
