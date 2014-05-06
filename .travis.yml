@@ -11,5 +11,8 @@ script:
 rvm:
   - 2.1
 
+env:
+    - AWS_ACCESS_KEY_ID=abc123 AWS_SECRET_ACCESS_KEY=abc123 AWS_S3_BUCKET=abc123
+
 notifications:
   email: false
