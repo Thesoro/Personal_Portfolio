@@ -1,6 +1,7 @@
 language: ruby
 
 before_script:
+  - cp config/database.yml.travis config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
 
 script:
@@ -9,6 +10,9 @@ script:
 
 rvm:
   - 2.1
+
+env:
+    - AWS_ACCESS_KEY_ID=abc123 AWS_SECRET_ACCESS_KEY=abc123 AWS_S3_BUCKET=abc123
 
 notifications:
   email: false
