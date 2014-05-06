@@ -12,8 +12,11 @@ gem 'devise'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 #gem 'sqlite3'
-gem 'pg'
-
+gem 'carrierwave'
+gem 'rmagick'
+gem 'mini_magick'
+gem 'fog'
+gem 'figaro'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

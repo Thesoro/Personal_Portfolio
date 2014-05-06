@@ -1,4 +1,18 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: Personal_Portfolio_development
+  pool: 5
+  password:
+
 test:
   adapter: postgresql
   database: travis_ci_test
   username: postgres
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: Personal_Portfolio_production
+  pool: 5
+  password:

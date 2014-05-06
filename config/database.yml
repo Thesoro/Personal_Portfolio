@@ -23,8 +23,10 @@ development:
 
 test:
   adapter: postgresql
-  database: travis_ci_test
-  username: postgres
+  encoding: unicode
+  database: Personal_Portfolio_test
+  pool: 5
+  password:
 
 production:
   adapter: postgresql
