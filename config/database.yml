@@ -15,16 +15,18 @@
 # gem 'pg'
 #
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: Personal_Portfolio_development
   pool: 5
-  timeout: 5000
+  password:
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: Personal_Portfolio_test
   pool: 5
-  timeout: 5000
+  password:
 
 production:
   adapter: postgresql

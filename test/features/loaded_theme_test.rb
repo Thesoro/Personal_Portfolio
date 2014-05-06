@@ -7,6 +7,6 @@ require "test_helper"
       #when I load the page
 
       #it should have a rad theme
-      page.text.must_include "Favea"
+      page.text.must_include "LOOGIES"
     end
   end

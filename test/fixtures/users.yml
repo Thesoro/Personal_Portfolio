@@ -12,3 +12,7 @@ janet:
 
 reno:
   email: "jessica@jessica.jes"
+
+author:
+  email: 'author@author.com'
+  password: 'authorcakes'
