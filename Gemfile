@@ -17,7 +17,7 @@ gem 'rmagick'
 gem 'mini_magick'
 gem 'fog'
 gem 'figaro'
-# Use Uglifier as compressor for JavaScript assets
+gem 'postmark-mitt'
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
