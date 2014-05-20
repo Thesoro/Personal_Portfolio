@@ -2,6 +2,9 @@ PersonalPortfolio::Application.routes.draw do
   devise_for :users
   resources :posts, :projects
 
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: "/sidekiq"
+
   root to: 'posts#index'
 
   # Example of regular route:

@@ -1,0 +1,5 @@
+New POST on your site
+
+  A new post by <%= @post.author %> was made.
+
+Please log in and approve it.
