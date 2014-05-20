@@ -16,6 +16,8 @@ gem 'foreman'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'sinatra', require: false
+
 
 group :doc do
   gem 'sdoc', require: false
